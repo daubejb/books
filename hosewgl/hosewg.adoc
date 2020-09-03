@@ -1,0 +1,57 @@
+
+:My name: Jeffrey B. Daube
+
+= Hands-on Software Engineering with Golang
+by {Achilleas Anagnostopoulos}
+
+== Birds eye view of Software Engineering
+
+DevOps is one of the most recently created Software Development Model (SDM)
+
+As teams transition from monolithic to service-oriented arhcitectures (SoA), each engineering team owns the services they build---including both development and operations
+
+*Two main DevOps models:*
+
+1. Culture, Automation, Measurement, and Sharing (CAMS)
+2. The three ways model
+
+== Best Practices for Maintainable and Testible Go Code
+
+Best practices tend to have a measurable positive effect on the code quality metrics associated with a code base and at the same time aid in minimizing the accumulation of technical debt.
+
+*SOLID principles of object-oriented design*
+
+_S_ - Single responsibility principle (SRP)
+
+coined by Robert Martin ("Uncle Bob")
+
+[quote, Robert Martin]
+In any well-designed system , objects should only have a single responsibility
+
+Object implementations should focus on doing one thing well, and in an efficient way
+
+_O_ - Open/closed
+
+coined by Betrand Meyer
+
+[quote, Betrand Meyer]
+A software module should be open for extension but closed for modification
+
+Golang does not support inheritance; that leaves composition as the only viable approach for extending existing code
+
+_L_ - Liskov substitution principle
+
+coined by Barbara Liskov
+
+[quote, Barbara Liskov]
+If, for each object, 01 of type s there is an object 02 of type t such that for all programs p defined in terms of t, the behavior of p is unchanged when 01 is substituted for 02, then s is a subtype of t
+
+Two types are substituteable if their exhibited behavior follow exactly the same contract, thereby making it impossible for the callers to distinguish between them
+
+Golang does not support the concept of classes or inheritance but instead relies on interfaces as the means for facilitating type substitutions
+
+Golang interfaces are implicit:: Each go type defines an implicit interface consisting of all the methods it implements.
+
+_I_ - Interface segregation
+
+_D_ - Dependency inversion
