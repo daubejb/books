@@ -52,6 +52,43 @@ Golang does not support the concept of classes or inheritance but instead relies
 
 Golang interfaces are implicit:: Each go type defines an implicit interface consisting of all the methods it implements.
 
-_I_ - Interface segregation
+_I_ - Interface segregation principle
 
-_D_ - Dependency inversion
+coined by Robert Martin
+
+clients should not be forced to depend upon the interfaces that they do not use
+
+[quote, Rob Pike]
+The bigger the interface, the weaker the abstraction
+
+_D_ - Dependency inversion principle
+
+High-level modules should not depend on low-level modules.
+Both should depend on abstractions.
+Abstractions should not depend on details.
+Details should not depend on abstractions.
+
+== Organize code into packages
+
+Naming conventions for packages:: Go package names should be short and concise and provide a clear indication of their purpose to the intended users of the package
+
+== Tips and tools for writing lean and easy-to-maintain Go code
+
+1. Optimize function implementations for readability
+2. Variable naming conventions - just long enough
+3. Use Go interfaces effectively
+4. Zero values are your friends (each type is automatically assigned its zero value when it gets instantiated)
+5. Use tools to analyze and manipulate Go programs (abstract syntax trees ASTs)
+
+[quote, Jack Lindamood]
+Accept interfaces, return structs
+
+== Dependency Management
+
+[quote, Pat Rice]
+If at first you don't suceed, call it version 1.0.
+
+Semantic versioning:: is a widely popular system for describing software versions in a way that makes it quite straightforward for the intended software users to figure out which versions contain breaking API changes and therfore require development effort and time when upgrading
+
+Major.minor.patch
+
