@@ -1,0 +1,16 @@
+:My name: Jeffrey B. Daube
+
+= Mastering Go
+by {Mihalis Tsoukalos}
+
+== UNIX stdin, stdout, stderr
+
+- /dev/stdin (file descriptor 0) = standard input
+- /dev/stdout (file descriptor 1) = standard output
+- /dev/stderr (file descriptor 2) = standard error
+
+Go uses:
+
+os.Stdin, os.Stdout, and os.Stderr
+
+

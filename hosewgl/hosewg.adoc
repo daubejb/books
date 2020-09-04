@@ -92,3 +92,44 @@ Semantic versioning:: is a widely popular system for describing software version
 
 Major.minor.patch
 
+== The Art of Testing
+
+[quote, Edsger Dijkstra]
+Program testing can be used to show the presence of bugs, but never to show their absence!
+
+Unit test:: the smallest possible big of code that we can test
+
+stub:: is the simplest test pattern that we can use in our tests
+
+Stubs typically implement a particular interface and don't contain any real logic
+
+spy:: is a stub that keeps a detailed log of all the methods that are invoked on it
+
+ResponseRecorder type
+
+mocks:: stubs on steroids
+
+== System component modeling
+
+UML Component diagram
+
+main goal is to identify and describe the structural connections between the various components that comprise our system
+
+[quote, author of this book]
+A component is defined as an encapsulated standalone unit that constitutes an integral part of a system or a sub-system.  Components communicate with each other by exposing and consuming one or several interfaces.  One key point of component-based design is that components should always be considered as abstract, logical entities that epxose a particular behavior.
+
+Command Query Responsibility Segregation (CQRS)::  An architectural pattern that separates the write and the read models exposed by a specific component so they can be optimized in isolation
+
+Proxy design pattern:: connect components without introducing any coupling between their concrete implementations
+
+== Building a Persitence Layer
+
+[quote, Robert C. Martin]
+Database schemas are notoriously volatile, extremely concrete, and highly depended on.  This is one reason why the interface between OO applications and databases is so difficult to manage, and why schema updates are generally painful.
+
+*ACID*
+
+Atomicity:: Transactions are applied completely or not at all
+Consistency:: The contents of a transaction is not allowed to bring the database into an invalid state
+Isolation:: Each transaction must execute in total isolation from other transactions
+Durability:: Once a transaction has been committed, it will remain committed, even if system goes down
