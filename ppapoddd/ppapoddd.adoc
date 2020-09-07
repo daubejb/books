@@ -1,0 +1,59 @@
+:My name: Jeffrey B. Daube
+
+= Patterns, Principles, and Practices of Domain-Driven Design
+by {Scott Millett with Nick Tune}
+
+== Part I: The Principles and Practices of Domain-Driven Design
+
+=== What is Domain-Drive Desing
+
+Domain-Drive Design:: (DDD) is a development philosophy defined by Eric Evans in his seminal work _Domain-Driven Design: Tackling Complexity in the Heart of Software_.  DDD is an approach to software development that enables teams to effectively manage the construction and maintenance of software for complex problem domains.
+
+[quote, Scott Millett with Nick Tune]
+Collaboration, communication, and context are so important for the design of maintainable software.
+
+==== Creating Software for Complex Problem Domains
+
+Big Ball of Mud:: (BBoM) pattern - a haphazardly structured, sprawling, sloppy, duct-taped-and-baling-wre, spaghetti-code jungle.
+
+[quote, Eric Evans]
+code that does something useful, but without explaining how
+
+One of the main reasons software becomes complex and difficult to manage is due to the mixing of domain complexities with technical complexities
+
+*Code Created without a Common Language*
+
+A lack of focus on a shared language and knowledge of the problem domain results in a codebase that works but does not reveal the intent of the business.
+
+*A Lack of Focus on the Problem Domain*
+
+Software projects fail when you don't understand the business domain you are working within well enough. Outside of non-functional requirements creating and keeping a useful software model of the domain that can fulfill business use-cases is the difficult part.
+
+Problem Domain:: refers to the subject area for which you are building software
+
+=== How the Patterns of Domain-Driven Design Manage Complexity
+
+*Distilling the Problem Domain to Reveal What is Important
+
+[quote, Scott Millett and Nick Tune]
+Not all of a large software product needs be perfectly designed---in fact trying to do so would be a waste of effort.
+
+Use analysis patterns and knowledge crunching to distill large problem domains to reveal the core sub domain --- the reason the software is being written
+
+==== Using a Shared Language to Enable Modeling Collaboration
+
+*Isolate Models from Ambiguity and Corruption*
+
+Models are isolated from infrastructure code to avoid the accidental complexity of merging technical and business concepts
+
+==== Patterns for Effective Knowledge Crunching
+
+Class Responsibility Collaboration Cards:: are divided into three areas and contain the following information: A class name, which represents a concept in the domain.  The responsibilities of the class.  Classes that are associated and are required
+
+==== Understanding the Business Model
+
+Business Model Canvas:: a visualization technique introduced by Alexander Osterwalder and Yves Pigneur --- it breaks down a business model into nine building blocks (Key Partners, Key Activities, Key Resources, Value Propositions, Customer Relationships, Customer Segments, Channels, Cose Structure, Revenue Streams)
+
+=== Model-Driven Design
+
+Domain-Model:: is the reality of the problem.  The domain model is a set of abstractions based on a projection of the domain design to handle specific business use cases.
